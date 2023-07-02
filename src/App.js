@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import EmployeeManageGrid from "./EmployeeManageGrid";
+import ModalView from "./lib/components/drop";
+import { Grid, Typography } from '@mui/material';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App">
+
+      <Grid container spacing={2} display={'flex'} justifyContent={'space-between'} alignItems="center" padding={'20px'}> 
+      <Grid item>
+        <Typography  variant="h4">Employee Details</Typography>
+      </Grid>
+      <Grid item>
+      <ModalView/>
+      </Grid>
+    </Grid>
+          <EmployeeManageGrid />
     </div>
   );
 }
-
-export default App;
